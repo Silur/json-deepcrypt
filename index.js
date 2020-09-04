@@ -1,6 +1,6 @@
 const openpgp = require('openpgp')
 const Joi = require('joi')
-// const jsonata = require('jsonata')
+const jsonwalk = require('jsonwalk')
 
 function b64encode (buf) {
   const binstr = Array.prototype.map.call(buf, function (ch) {
@@ -22,14 +22,6 @@ function b64decode (str) {
       .map(function (c) { return c.charCodeAt(0) }))
     return ret
   }
-}
-
-async function sha256 (message) {
-  const msgUint8 = new TextEncoder().encode(message)
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8)
-  const hashArray = Array.from(new Uint8Array(hashBuffer))
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('')
-  return hashHex
 }
 
 module.exports = {
@@ -93,5 +85,6 @@ module.exports = {
       })
       return decrypted
     }
-  }
+  },
+  walk: jsonwalk.walk
 }

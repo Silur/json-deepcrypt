@@ -27,7 +27,8 @@
   "dependencies": {
     "chai": "^4.2.0",
     "joi": "^17.2.1",
-    "jsonata": "^1.8.3",
+    "js-sha256": "^0.9.0",
+    "jsonwalk": "git+https://github.com/Silur/jsonwalk.git",
     "mocha": "^8.1.3",
     "openpgp": "^4.10.8"
   }
