@@ -195,11 +195,3 @@ it('RSA encrypt with multiple keys', async function () {
   })
   expect(JSON.parse(decrypted)).to.deep.equal(plainText)
 })
-
-function mapOperation(obj, index, element) {
-  return element
-}
-
-it('Walk JSON', function () {
-  jsonEncrypt.walk(plainText, encryptSchema, mapOperation)
-})
