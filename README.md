@@ -1,5 +1,4 @@
-# json-deepcrypt ![](https://img.shields.io/npm/v/json-deepcrypt)
-
+# json-deepcrypt [![npm](https://img.shields.io/npm/v/json-deepcrypt)](https://www.npmjs.com/package/json-deepcrypt)
 A tool to recursively encrypt and optionally MAC specified fields of JSON data based on `jq`-like schemas. The codebase was originally intended to ease pinning of JSON-based stuff on blockchain but found other use cases. It uses [OpenPGP.js](https://openpgpjs.org/) under the hood
 
 ## Install
